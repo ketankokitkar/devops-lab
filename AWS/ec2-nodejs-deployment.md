@@ -173,7 +173,8 @@ Start it again when required.
 * Accessing an application using an EC2 public IP
 * Understanding the difference between stopping an application and stopping an EC2 instance
 
-```
+## Reference
 
-This is better suited to your **`devops-lab` portfolio** because it documents what you actually did rather than just copying the tutorial README.
-```
+- Tutorial Repository: https://github.com/verma-kunal/AWS-Session
+- YouTube Tutorial: https://www.youtube.com/watch?v=NLmF64KdLN0
+
