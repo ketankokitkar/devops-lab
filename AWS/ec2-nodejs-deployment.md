@@ -1,4 +1,4 @@
-````markdown
+
 # Node.js Application Deployment on AWS EC2
 
 ## Project Overview
@@ -7,15 +7,22 @@ Deployed a Node.js application on an AWS EC2 Ubuntu instance and made it accessi
 
 ## Architecture
 
-User Browser  
-↓  
-AWS EC2  
-↓  
-Ubuntu Linux  
-↓  
-Node.js Application  
-↓  
+```text
+User Browser
+     |
+     | HTTP :3000
+     ↓
+AWS EC2
+     |
+     ↓
+Ubuntu Linux
+     |
+     ↓
+Node.js Application
+     |
+     ↓
 Port 3000
+````
 
 ## Environment
 
