@@ -7,22 +7,15 @@ Deployed a Node.js application on an AWS EC2 Ubuntu instance and made it accessi
 
 ## Architecture
 
-```text
-User Browser
-     |
-     | HTTP :3000
-     ↓
-AWS EC2
-     |
-     ↓
-Ubuntu Linux
-     |
-     ↓
-Node.js Application
-     |
-     ↓
+User Browser  
+↓  
+AWS EC2  
+↓  
+Ubuntu Linux  
+↓  
+Node.js Application  
+↓  
 Port 3000
-````
 
 ## Environment
 
