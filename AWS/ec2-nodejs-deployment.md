@@ -175,6 +175,10 @@ Start it again when required.
 
 ## Reference
 
-- Tutorial Repository: https://github.com/verma-kunal/AWS-Session
-- YouTube Tutorial: https://www.youtube.com/watch?v=NLmF64KdLN0
+This project is based on the following tutorial and repository:
 
+- **GitHub Repository:** [AWS-Session](https://github.com/verma-kunal/AWS-Session)
+- **YouTube Tutorial:** [Deploying a Node.js Application on AWS EC2](https://www.youtube.com/watch?v=NLmF64KdLN0)
+
+
+> This repository contains my personal hands-on implementation, notes, and learning from the referenced tutorial.
