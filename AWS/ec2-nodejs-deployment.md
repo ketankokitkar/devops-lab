@@ -1,7 +1,3 @@
-Ah, got it. You want the **general notes for the Node.js project/deployment** to put in the README, not a general DevOps roadmap.
-
-Use this for the `AWS-Session` project section:
-
 ````markdown
 # Node.js Application Deployment on AWS EC2
 
