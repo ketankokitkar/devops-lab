@@ -1,0 +1,17 @@
+---
+- name: Gather server facts
+  hosts: webservers
+  gather_facts: yes
+
+  tasks:
+    - name: Display hostname
+      debug:
+        var: ansible_facts['hostname']
+
+    - name: Display OS
+      debug:
+        var: ansible_facts['distribution']
+
+    - name: Display IP address
+      debug:
+        var: ansible_facts['default_ipv4']['address']

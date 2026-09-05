@@ -1,0 +1,15 @@
+---
+- name: Error Handling Practice
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Check Nginx status
+      command: systemctl is-active nginx
+      register: nginx_status
+      changed_when: false
+      failed_when: nginx_status.stdout != "inactive"
+
+    - name: Display Nginx status
+      debug:
+        var: nginx_status.stdout

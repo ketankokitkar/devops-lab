@@ -1,0 +1,8 @@
+---
+# Handlers for the webserver role
+
+- name: Restart Nginx
+  service:
+    name: nginx
+    state: restarted
+  become: yes

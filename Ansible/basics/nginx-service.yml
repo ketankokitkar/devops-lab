@@ -1,0 +1,11 @@
+---
+- name: Manage Nginx
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started
+        enabled: yes

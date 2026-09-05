@@ -1,0 +1,21 @@
+---
+- name: Register example
+  hosts: webservers
+  gather_facts: yes
+
+  tasks:
+    - name: Check uptime
+      command: uptime
+      register: uptime_result
+
+    - name: Display uptime result
+      debug:
+        var: uptime_result
+
+    - name: Display stdout
+      debug:
+        var: uptime_result.stdout
+
+    - name: Display return code
+      debug:
+        var: uptime_result.rc

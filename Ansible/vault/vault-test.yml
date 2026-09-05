@@ -1,0 +1,17 @@
+---
+- name: Real World Vault Example
+  hosts: webservers
+  become: yes
+
+  vars_files:
+    - secrets.yml
+
+  tasks:
+    - name: Create application config
+      copy:
+        content: |
+          DB_USERNAME={{ db_username }}
+          DB_PASSWORD={{ db_password }}
+          API_KEY={{ api_key }}
+        dest: /opt/devops/app.conf
+        mode: '0600'

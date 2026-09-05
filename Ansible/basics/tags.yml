@@ -1,0 +1,25 @@
+---
+- name: Ansible Tags Practice
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        state: present
+      tags:
+        - install
+
+    - name: Check Nginx status
+      command: systemctl is-active nginx
+      register: nginx_status
+      changed_when: false
+      tags:
+        - check
+
+    - name: Display Nginx status
+      debug:
+        var: nginx_status.stdout
+      tags:
+        - check

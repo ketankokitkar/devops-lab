@@ -1,0 +1,12 @@
+---
+- name: Conditional example
+  hosts: webservers
+  gather_facts: yes
+
+  tasks:
+    - name: Install Nginx on Ubuntu
+      apt:
+        name: nginx
+        state: present
+      become: yes
+      when: ansible_facts['distribution'] == "Ubuntu"

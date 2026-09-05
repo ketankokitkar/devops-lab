@@ -1,0 +1,12 @@
+---
+- name: AWS Web Server Practice
+  hosts: role_Web
+  gather_facts: yes
+
+  tasks:
+    - name: Display server information
+      debug:
+        msg:
+          - "Hostname: {{ ansible_facts['hostname'] }}"
+          - "OS: {{ ansible_facts['distribution'] }}"
+          - "Private IP: {{ ansible_facts['default_ipv4']['address'] }}"

@@ -1,0 +1,10 @@
+---
+- name: Template example
+  hosts: webservers
+  gather_facts: yes
+
+  tasks:
+    - name: Create server info file
+      template:
+        src: server-info.j2
+        dest: /tmp/server-info.txt

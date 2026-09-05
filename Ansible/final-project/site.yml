@@ -1,0 +1,12 @@
+---
+# Main playbook for the final Ansible project
+# Target: AWS EC2 instances tagged Role=Web
+
+- name: Configure AWS Web Servers
+  hosts: role_Web
+
+  vars_files:
+    - secrets.yml
+
+  roles:
+    - webserver

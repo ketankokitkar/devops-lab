@@ -1,0 +1,4 @@
+---
+# Default variables for the webserver role
+
+package_name: nginx

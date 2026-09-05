@@ -1,0 +1,11 @@
+# Managed by Ansible
+# Role: webserver
+
+server {
+    listen 80;
+    server_name _;
+
+    location / {
+        return 200 "Managed by Ansible\n";
+    }
+}

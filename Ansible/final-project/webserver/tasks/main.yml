@@ -1,0 +1,41 @@
+---
+# Role: webserver
+# Purpose: Install and configure a web server
+
+- name: Install Package
+  apt:
+    name: "{{ package_name }}"
+    state: present
+  become: yes
+
+- name: Disable default Nginx site
+  file:
+    path: /etc/nginx/sites-enabled/default
+    state: absent
+  become: yes
+  notify:
+    - Restart Nginx
+
+- name: Remove old Ansible demo configuration
+  file:
+    path: /etc/nginx/conf.d/ansible-demo.conf
+    state: absent
+  become: yes
+  notify:
+    - Restart Nginx
+
+- name: Remove old demo configuration
+  file:
+    path: /etc/nginx/conf.d/demo.conf
+    state: absent
+  become: yes
+  notify:
+    - Restart Nginx
+
+- name: Configure Nginx
+  template:
+    src: devops.conf.j2
+    dest: /etc/nginx/conf.d/devops.conf
+  become: yes
+  notify:
+    - Restart Nginx

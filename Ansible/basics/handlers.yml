@@ -1,0 +1,22 @@
+---
+- name: Configure Nginx
+  hosts: webservers
+  become: yes
+
+  tasks:
+    - name: Create demo configuration
+      copy:
+        content: |
+          # Ansible Demo Configuration
+          server {
+              listen 80;
+              server_name _;
+          }
+        dest: /etc/nginx/conf.d/demo.conf
+      notify: Restart Nginx
+
+  handlers:
+    - name: Restart Nginx
+      service:
+        name: nginx
+        state: restarted
