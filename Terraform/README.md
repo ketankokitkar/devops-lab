@@ -1,4 +1,4 @@
-````markdown
+
 # Terraform Lab
 
 This repository contains my hands-on learning and practical implementation of Terraform, with a focus on AWS infrastructure and real-world Terraform workflows.
