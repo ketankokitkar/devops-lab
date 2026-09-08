@@ -1,4 +1,4 @@
-````markdown
+
 # Terraform EC2 Instance Creation
 
 ## Overview
