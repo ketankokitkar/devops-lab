@@ -1,6 +1,6 @@
 # AWS Cloud Computing Fundamentals
 
-![AWS Cloud Computing Fundamentals](cloud-computing-fundamentals.png)
+![AWS Cloud Computing Fundamentals](AWS%20Cloud%20Computing%20Fundamentals%20Infographic.png)
 
 A visual learning guide for **AWS Certified Cloud Practitioner (CLF-C02)**, covering the fundamentals of cloud computing.
 
